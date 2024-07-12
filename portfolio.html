@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>portfolio</title>
+        <link rel="stylesheet" href="portfolio.css">
+        <script src="https://kit.fontawesome.com/83a68bb683.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <img src="image/12345.jpg" class="mylogo">
+                    <ul>
+                        <li><a href="#header" > Home</a></li>
+                        <li><a href="#about" > About</a></li>
+                        <li><a href="#services" > My Services</a></li>
+                        <li><a href="#contact" > contact</a></li>
+                    </ul>
+                </nav> 
+                <div class="header-text">
+                    <p> UX/UI Designer</p>
+                    <h1>Hi,I'm <span>Lakshitha..</span> <br> From srilankan</h1>
+
+                </div>
+            </div>
+        </div>
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="one-col-1">
+                        <img src="image/1234.jpg" >
+                    </div>
+                    <div class="one-col-2">
+                        <h1 class="two">About</h1>
+                        <p>
+                             I am undergraduate IT student as Saegis Campus Nugegoda a passionate 
+                             Software developer. Since my first year, I have been exploring diverse technology like 
+                             HTML,CSS,Java.I am constantly seeking new challenge and opportunities to build my skill & experience.
+
+
+                        </p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skill')">Skill</p>
+                            <p class="tab-links"  onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links"  onclick="opentab('education')">Education</p>
+                        </div>
+                            <div class="tab-contents active-tab" id="skill" >
+                                <ul>
+                                    <li><span>HTML</span><br>Web design</li>
+                                    <li><span>css</span><br>Web design</li>
+                                    <li><span>Java</span><br>Writing scripts and developing applications using Java</li>
+                                    <li><span>python</span><br>Writing scripts and developing applications using Python</li>
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="experience">
+                                <ul>
+                                    <li><span>UI/UX Design Intern</span><br>Worked on designing and prototyping user interfaces for web applications</li>
+                        <li><span>Web Development Intern</span><br>Developed front-end features and fixed bugs for existing websites</li>
+                        <li><span>App Development Project</span><br>Created a mobile application as part of a university project</li>
+                    </ul>
+                                    
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="education">
+                                <ul>
+                                    <li><span>Bachelor of Software Engineering(undergraduate)</span><br>Saegis Campus Nugegoda</li>
+                                </ul>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="services">
+            <div class="container">
+                <h1 class="two">My Services</h1>
+                <div class ="services-list">
+                    <div>
+                        <i class="fa-solid fa-code"></i>
+                        <h2>web design</h2>
+                        <p>web design</p>
+                        <a href="#">Learn more</a>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-crop-simple"></i>
+                        <h2>UI/UX design</h2>
+                        <p>UI/UX design</p>
+                        <a href="#">Learn more</a>
+                    </div>
+                    <div>
+                        <i class="fa-brands fa-python"></i>
+                        <h2>python</h2>
+                        <p>python</p>
+                        <a href="#">Learn more</a>
+                    </div>
+                </div>
+             </div>
+        </div>
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">contact me</h1>
+                        <p><i class="fa-solid fa-paper-plane"></i>Lakshithadahanagge@gmali.com</p>
+                        <p><i class="fa-solid fa-square-phone"></i>+94759452339</p>
+                        <div class="social-icons">
+                            <a href="https://facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="https://whatsapp.com"><i class="fa-brands fa-whatsapp"></i></a>
+                            <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://linkedin.com"><i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-right">
+                        <form name="submit-to-google-sheet">
+                            <input type="text" name="Name"placeholder="your name" required>
+                            <input type="email"name="email"placeholder="your email" required>
+                            <textarea name="message" rows="6"placeholder="your message"></textarea>
+                            <button type="submit" class="btn">submit</button>
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>copyright @ lakshitha...<i class="fa-solid fa-heart"></i></p>
+            </div>
+
+        </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+           }
+           event.currentTarget.classList.add("active-link");
+           document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+        const scriptURL='https://script.google.com/macros/s/AKfycbzQI47HFhgXw8hjtHolLaYmaAUzO4UkVOqz0oVAt0fRwXYGHtriLOPDV0hsHJUoghtd/exec'
+        const form = document.forms['submit-to-google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+    </body>
+</html>
